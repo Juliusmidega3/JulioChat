@@ -1,4 +1,9 @@
-import "./navbar.css"
+import "./navbar.css";
+import Notification from "../../img/notification.svg"
+import Message from "../../img/message.svg"
+import Settings from "../../img/settings.svg"
+
+
 
 const Navbar = () => {
     return (
@@ -6,7 +11,15 @@ const Navbar = () => {
             <span className="logo">Julio Chat</span>
             <div className="icons">
                 <div className="icon">
-                    <img src="" alt="" className="iconImg" />
+                    <img src={Notification} alt="" className="iconImg" />
+                    <div className="counter">2</div>
+                </div>
+                <div className="icon">
+                    <img src={Message} alt="" className="iconImg" />
+                    <div className="counter">2</div>
+                </div>
+                <div className="icon">
+                    <img src={Settings} alt="" className="iconImg" />
                     <div className="counter">2</div>
                 </div>
             </div>
