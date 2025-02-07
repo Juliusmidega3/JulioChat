@@ -2,34 +2,36 @@ import { useState } from "react";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Card from "./components/card/Card"
-import Logo from "./components/logo/Logo"
+import Profile from "./components/profile/Profile"
+import {posts} from "./data"
 
 const App = () => {
   const [username, setUsername] = useState("");
   const [user, setUser] = useState("");
 
   return (
-    <div>
-      <Logo />
+    <main>
+      <Profile />
       <div className="container">
-      {user ? (
-        <>
-        <Logo />
-        <Navbar />
-        <Card />
-        <span className="username">{user}</span>
-        </>
-      ): (
-        <div className="login">
-          <input
-           type="text"
-            placeholder="username"
-            onChange={(e) => setUsername(e.target.value)}/>
-          <button onClick={() => setUser(username)}>Login</button>
-        </div>
-      )}
-    </div>
-    </div>
+        {user ? (
+              <>        
+              <Navbar />
+              {posts.map((post) => (
+                <Card key={post.id} post={post}/>
+              ))}
+              <span className="username">{user}</span>
+              </>
+            ): (
+              <div className="login">
+                <input
+                type="text"
+                  placeholder="username"
+                  onChange={(e) => setUsername(e.target.value)}/>
+                <button onClick={() => setUser(username)}>Login</button>
+              </div>
+            )}
+      </div>
+    </main>
   )
 }
 

@@ -1,0 +1,17 @@
+.prof {
+    width: 200px;
+    height: 200px;
+    border: none;
+    
+   
+}
+    
+.profImg{
+    width: 180px;
+    height: 180px;
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

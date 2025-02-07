@@ -1,0 +1,15 @@
+.card {
+    height: 280px;
+}
+.info {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.userImg {
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
